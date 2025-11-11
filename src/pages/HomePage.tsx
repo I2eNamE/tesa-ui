@@ -1,19 +1,14 @@
 /**
- * HomePage.tsx
- *
  * หน้าแรกของแอพพลิเคชั่น - แสดงเมนูไปยังหน้าต่างๆ ในการเรียนรู้
  */
 
-// 1. Import components
 import { Container, Typography, Grid, Card, CardContent, CardActionArea, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 const HomePage = () => {
-  // 2. useNavigate hook สำหรับเปลี่ยนหน้า
   const navigate = useNavigate();
 
-  // 3. กำหนดรายการหน้าทั้งหมด
   const pages = [
     {
       title: '01. React Router',
@@ -74,40 +69,29 @@ const HomePage = () => {
   ];
 
   return (
-    // 4. Container หลัก
     <Container maxWidth="lg" sx={{ py: 4 }}>
-      {/* 5. หัวข้อหลัก */}
       <Typography variant="h2" gutterBottom align="center">
         TESA UI Learning
       </Typography>
 
-      {/* 6. คำอธิบาย */}
       <Typography variant="h6" paragraph align="center" color="text.secondary" sx={{ mb: 4 }}>
         เรียนรู้การสร้างแอพพลิเคชั่น TESA ทีละขั้นตอน
       </Typography>
 
-      {/* 7. Grid สำหรับแสดงการ์ด */}
-      {/* spacing={3} = ระยะห่าง 24px */}
       <Grid container spacing={3}>
-        {/* 8. วนลูปสร้าง Card แต่ละอัน */}
         {pages.map((page) => (
-          // 9. Grid item - responsive (mobile: 100%, tablet: 50%, desktop: 33.33%) */}
           <Grid key={page.path} size={{ xs: 12, md: 6, lg: 4 }}>
-            {/* 10. Card component */}
             <Card
               sx={{
                 height: '100%',
                 transition: 'transform 0.2s, box-shadow 0.2s',
                 '&:hover': {
-                  // 11. เมื่อ hover ให้ขยายเล็กน้อย
                   transform: 'translateY(-4px)',
                   boxShadow: 4,
                 },
               }}
             >
-              {/* 12. CardActionArea ทำให้ทั้ง card คลิกได้ */}
               <CardActionArea onClick={() => navigate(page.path)}>
-                {/* 13. ส่วนบนของ card - สีตามที่กำหนด */}
                 <Box
                   sx={{
                     height: 120,
@@ -117,18 +101,13 @@ const HomePage = () => {
                     justifyContent: 'center',
                   }}
                 >
-                  {/* 14. Icon ขนาดใหญ่สีขาว */}
                   <Icon icon={page.icon} width={64} style={{ color: 'white' }} />
                 </Box>
 
-                {/* 15. ส่วนเนื้อหา */}
                 <CardContent>
-                  {/* 16. ชื่อหน้า */}
                   <Typography variant="h6" gutterBottom>
                     {page.title}
                   </Typography>
-
-                  {/* 17. คำอธิบาย */}
                   <Typography variant="body2" color="text.secondary">
                     {page.description}
                   </Typography>
@@ -142,5 +121,4 @@ const HomePage = () => {
   );
 };
 
-// 18. Export component
 export default HomePage;

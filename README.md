@@ -9,37 +9,41 @@
 ### หน้าที่สร้างแล้ว ✅
 
 1. **01. React Router** (`/01-route`)
+
    - เรียนรู้การทำ routing และการเปลี่ยนหน้า
    - ใช้ `react-router-dom` สำหรับจัดการ routes
 
 2. **02. MUI Grid System** (`/02-mui-grid`)
+
    - เรียนรู้การจัดวาง layout ด้วย Material-UI Grid
    - ระบบ Grid 12 columns แบบ responsive
 
 3. **03. Detection Card** (`/03-detection-card`)
+
    - Component สำหรับแสดงข้อมูลการตรวจจับวัตถุ
    - รูปแบบ Card พร้อมรูปภาพและรายละเอียด
 
 4. **04. Detection Popup** (`/04-detection-popup`)
+
    - Component สำหรับแสดงรายละเอียดวัตถุ
    - ใช้แสดงใน popup บนแผนที่
 
 5. **05. Image Viewer** (`/05-image-viewer`)
+
    - Component สำหรับแสดงและขยายรูปภาพ
    - Thumbnail + Modal แบบ full screen
 
 6. **06. Map Component** (`/06-map`)
+
    - แผนที่ Mapbox พร้อม custom markers
    - Pulse animation และ click to show popup
 
 7. **07. API & Socket** (`/07-api-socket`)
+
    - อธิบายการทำงานของ API และ Socket.IO แบบละเอียด
    - Data flow diagram และตัวอย่าง code
 
-8. **08. Dashboard** (`/08-dashboard`)
-   - หน้า Dashboard รวมทุกอย่าง
-   - เชื่อมต่อ API และ Socket.IO
-   - แสดง Map + Detection Feed แบบ real-time
+
 
 ### Components ที่สร้างแล้ว
 
@@ -115,7 +119,6 @@ tesa-ui/
 │   │   ├── 05_ImageViewerPage.tsx
 │   │   ├── 06_MapPage.tsx
 │   │   ├── 07_ApiSocketPage.tsx
-│   │   └── 08_DashboardPage.tsx
 │   │
 │   ├── types/            # TypeScript types
 │   │   └── detection.ts
@@ -134,6 +137,7 @@ tesa-ui/
 ## 📦 Dependencies
 
 ### Main Dependencies
+
 - **React 19** - UI library
 - **TypeScript** - Type safety
 - **Vite** - Build tool
@@ -149,49 +153,49 @@ tesa-ui/
 ## 💡 สิ่งที่เรียนรู้ในแต่ละหน้า
 
 ### 01. React Router
+
 - การใช้ `BrowserRouter`, `Routes`, `Route`
 - การใช้ `Link` และ `useNavigate`
 - การสร้าง navigation ระหว่างหน้า
 
 ### 02. MUI Grid System
-- การใช้ `Grid2` component
+
+- การใช้ `Grid` component
 - Responsive design (xs, md, lg)
 - Layout patterns (3 columns, sidebar, etc.)
 
 ### 03. Detection Card
+
 - การสร้าง Card component
 - การแสดงข้อมูลที่ซับซ้อน
 - การใช้ Material-UI components
 
 ### 04. Detection Popup
+
 - การสร้าง Popup component
 - Icon mapping ตามประเภทวัตถุ
 - การแสดงรายละเอียดวัตถุ
 
 ### 05. Image Viewer
+
 - การสร้าง Image viewer component
 - Modal และ Backdrop
 - Hover effects และ transitions
 
 ### 06. Map Component
+
 - การใช้ Mapbox GL
 - การสร้าง custom markers
 - Pulse animation
 - Click events และ popup
 
 ### 07. API & Socket
+
 - การเรียกใช้ API ด้วย Axios
 - React Query สำหรับ caching
 - Socket.IO สำหรับ real-time
 - Data flow diagram
 
-### 08. Dashboard
-- การเรียกใช้ API ด้วย React Query
-- การเชื่อมต่อ Socket.IO
-- การจัดการ state สำหรับ real-time data
-- การผสมผสาน history data และ real-time data
-- การแสดงแผนที่พร้อม markers
-- Detection feed
 
 ## 📝 หมายเหตุ
 
@@ -214,4 +218,3 @@ tesa-ui/
 - `/05-image-viewer` - เรียนรู้ Image Viewer
 - `/06-map` - เรียนรู้ Map Component
 - `/07-api-socket` - เรียนรู้ API & Socket.IO
-- `/08-dashboard` - Dashboard (รวมทุกอย่าง)
